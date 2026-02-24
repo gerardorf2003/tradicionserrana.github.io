@@ -193,15 +193,14 @@ document.getElementById('form-producto').onsubmit = async (e) => {
         const cloudData = await cloudRes.json();
 
         await addDoc(collection(db, "productos"), {
-            nombre: p-nombre.value,
-            precio: p-precio.value,
-            ubicacion: p-ubicacion.value,
-            descripcion: p-desc.value,
-            imagenUrl: cloudData.secure_url,
-            vendedorEmail: auth.currentUser.email,
-            createdAt: new Date()
-        });
-
+    nombre: document.getElementById('p-nombre').value,
+    precio: document.getElementById('p-precio').value,
+    ubicacion: document.getElementById('p-ubicacion').value,
+    descripcion: document.getElementById('p-desc').value,
+    imagenUrl: cloudData.secure_url,
+    vendedorEmail: auth.currentUser.email,
+    createdAt: new Date()
+});
         mensajeExito.innerText = "✅ Producto publicado correctamente.";
         e.target.reset();
 
@@ -216,3 +215,4 @@ document.getElementById('form-producto').onsubmit = async (e) => {
 
 </body>
 </html>
+
