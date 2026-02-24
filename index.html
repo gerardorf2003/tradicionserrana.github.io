@@ -15,12 +15,20 @@
     --crema: #fdfcf9; 
     --tierra: #8b5a2b;
 }
-body { font-family: 'Poppins', sans-serif; background-color: var(--crema); color: #333; }
-.navbar { background: linear-gradient(135deg, var(--verde-serrano), var(--verde-oscuro)) !important; }
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--crema); 
+    color: #333;
+}
+
+.navbar { 
+    background: linear-gradient(135deg, var(--verde-serrano), var(--verde-oscuro)) !important; 
+}
 
 .hero-section {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-    url('https://images.unsplash.com/photo-1495539406979-bf61750d38ad?auto=format&fit=crop&w=1470&q=80');
+                url('https://images.unsplash.com/photo-1495539406979-bf61750d38ad?auto=format&fit=crop&w=1470&q=80');
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -30,13 +38,21 @@ body { font-family: 'Poppins', sans-serif; background-color: var(--crema); color
     text-align: center;
     color: white;
 }
+
 .hero-section h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.8rem;
     letter-spacing: 3px;
 }
 
-.nav-tabs { border: none; justify-content: center; margin-top: -30px; position: relative; z-index: 10; }
+.nav-tabs { 
+    border: none; 
+    justify-content: center; 
+    margin-top: -30px; 
+    position: relative; 
+    z-index: 10; 
+}
+
 .nav-tabs .nav-link {
     background: white;
     border: none;
@@ -47,6 +63,7 @@ body { font-family: 'Poppins', sans-serif; background-color: var(--crema); color
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
 .nav-tabs .nav-link.active {
     background-color: var(--tierra) !important;
     color: white !important;
@@ -57,18 +74,24 @@ body { font-family: 'Poppins', sans-serif; background-color: var(--crema); color
     height: 450px;
     object-fit: cover;
 }
+
 .product-card { 
     border-radius: 25px; 
     transition: all 0.4s ease; 
     background: white;
-    border: 1px solid #eeeeee;
+    border: 1px solid #eee;
     overflow: hidden;
 }
+
 .product-card:hover { 
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
 }
-.card-img-top { height: 280px; object-fit: cover; }
+
+.card-img-top { 
+    height: 280px; 
+    object-fit: cover; 
+}
 
 .btn-contact {
     background: linear-gradient(135deg, var(--verde-serrano), var(--verde-oscuro));
@@ -79,21 +102,10 @@ body { font-family: 'Poppins', sans-serif; background-color: var(--crema); color
     font-weight: 600;
     border: none;
 }
-.btn-contact:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
 
-.info-step {
-    text-align: center;
-    padding: 40px 20px;
-    border-radius: 20px;
-    background: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    height: 100%;
+footer {
+    background: linear-gradient(135deg, #1b3d1a, #2d5a27);
 }
-
-footer { background: linear-gradient(135deg, #1b3d1a, #2d5a27); }
 </style>
 </head>
 
@@ -110,7 +122,11 @@ footer { background: linear-gradient(135deg, #1b3d1a, #2d5a27); }
 <div>
 <h1>TRADICIÓN SERRANA</h1>
 <p class="lead mb-4">Un pedazo de nuestra tierra en cada producto.</p>
-<a href="#catalogo" class="btn btn-light btn-lg rounded-pill px-4 fw-bold">Explorar Productos</a>
+<button class="btn btn-light btn-lg rounded-pill px-4 fw-bold"
+        data-bs-toggle="tab"
+        data-bs-target="#catalogo">
+Explorar Productos
+</button>
 </div>
 </header>
 
@@ -129,17 +145,11 @@ footer { background: linear-gradient(135deg, #1b3d1a, #2d5a27); }
 
 <div class="tab-pane fade show active" id="inicio">
 
-<h2 class="text-center mb-5" style="font-family: 'Playfair Display', serif;">¿Por qué Tradición Serrana?</h2>
-
-<div class="row g-4 mb-5">
-<div class="col-md-4"><div class="info-step"><h4>🚜 Origen Local</h4><p class="text-muted">Productos creados por manos de nuestra serranía.</p></div></div>
-<div class="col-md-4"><div class="info-step"><h4>🤝 Comercio Justo</h4><p class="text-muted">Trato directo con el productor.</p></div></div>
-<div class="col-md-4"><div class="info-step"><h4>✨ Calidad Única</h4><p class="text-muted">Sabores y artesanías auténticas.</p></div></div>
-</div>
-<div id="carouselInicio" 
-     class="carousel slide mb-5 shadow rounded-5 overflow-hidden" 
+<div id="carouselInicio" class="carousel slide mb-5 shadow rounded-5 overflow-hidden"
      data-bs-ride="carousel"
-     data-bs-interval="3000">
+     data-bs-interval="3500">
+
+<div class="carousel-inner">
 <div class="carousel-item active">
 <img src="imagen1.jpg" class="d-block w-100">
 </div>
@@ -150,24 +160,16 @@ footer { background: linear-gradient(135deg, #1b3d1a, #2d5a27); }
 <img src="imagen3.jpg" class="d-block w-100">
 </div>
 </div>
+
 <button class="carousel-control-prev" type="button" data-bs-target="#carouselInicio" data-bs-slide="prev">
 <span class="carousel-control-prev-icon"></span>
 </button>
+
 <button class="carousel-control-next" type="button" data-bs-target="#carouselInicio" data-bs-slide="next">
 <span class="carousel-control-next-icon"></span>
 </button>
+
 </div>
-
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselInicio" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselInicio" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div
-
 </div>
 
 <div class="tab-pane fade" id="catalogo">
@@ -194,23 +196,21 @@ footer { background: linear-gradient(135deg, #1b3d1a, #2d5a27); }
 </div>
 </footer>
 
+<!-- MODAL CONTACTO -->
 <div class="modal fade" id="modalContacto" tabindex="-1">
 <div class="modal-dialog modal-dialog-centered">
-<div class="modal-content rounded-4 shadow">
-<div class="modal-header text-white" style="background: linear-gradient(135deg, #2d5a27, #1b3d1a);">
-<h5 class="modal-title">Datos del Vendedor</h5>
-<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+<div class="modal-content rounded-4">
+<div class="modal-header border-0">
+<h5 class="modal-title fw-bold">Datos del Vendedor</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 </div>
-<div class="modal-body text-center p-4">
-<h4 id="modal-producto" class="fw-bold mb-3"></h4>
-<p><strong>👤 Vendedor:</strong><br><span id="modal-vendedor"></span></p>
-<p><strong>📍 Ubicación:</strong><br><span id="modal-ubicacion"></span></p>
-<p><strong>📞 Teléfono:</strong><br><span id="modal-telefono"></span></p>
-<p><strong>✉️ Correo:</strong><br><span id="modal-email"></span></p>
-<div class="d-grid gap-2 mt-4">
-<a id="btn-whatsapp" target="_blank" class="btn btn-success rounded-pill">WhatsApp</a>
-<a id="btn-correo" class="btn btn-outline-dark rounded-pill">Enviar Correo</a>
-</div>
+<div class="modal-body text-center">
+<h5 id="modalNombreProducto" class="fw-bold mb-3"></h5>
+<p><strong>Email:</strong></p>
+<p id="modalEmail" class="text-muted"></p>
+<p><strong>Teléfono:</strong></p>
+<p id="modalTelefono" class="text-muted"></p>
+<div id="botonWhatsappContainer" class="mt-3"></div>
 </div>
 </div>
 </div>
@@ -222,14 +222,15 @@ footer { background: linear-gradient(135deg, #1b3d1a, #2d5a27); }
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
 import { getFirestore, collection, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
-const firebaseConfig = {
-apiKey: "TU_API_KEY",
-authDomain: "TU_AUTH_DOMAIN",
-projectId: "TU_PROJECT_ID",
-storageBucket: "TU_STORAGE_BUCKET",
-messagingSenderId: "TU_MSG_ID",
-appId: "TU_APP_ID"
-};
+  const firebaseConfig = {
+            apiKey: "AIzaSyDTeO88X2kS5Y35VifPK-Xp9aojdHwCEqc",
+  authDomain: "tradicion-serrana-9eddb.firebaseapp.com",
+  projectId: "tradicion-serrana-9eddb",
+  storageBucket: "tradicion-serrana-9eddb.firebasestorage.app",
+  messagingSenderId: "1029895692370",
+  appId: "1:1029895692370:web:eaa51b96aeebc030ff3f8b",
+  measurementId: "G-0ZKWW4YNX0"
+    };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -242,7 +243,6 @@ onSnapshot(q, (snapshot) => {
 contenedor.innerHTML = '';
 snapshot.forEach((doc) => {
 const p = doc.data();
-
 contenedor.innerHTML += `
 <div class="col">
 <div class="card product-card h-100">
@@ -252,13 +252,7 @@ contenedor.innerHTML += `
 <p class="text-muted small">${p.descripcion}</p>
 <div class="d-grid">
 <button class="btn btn-contact"
-onclick="abrirModalContacto(
-'${p.nombre}',
-'${p.vendedorNombre || "Productor Local"}',
-'${p.ubicacion || "Sierra"}',
-'${p.telefono || ""}',
-'${p.vendedorEmail}'
-)">
+onclick="abrirModalContacto('${p.nombre}','${p.vendedorEmail}','${p.telefono || ''}')">
 Contactar Vendedor
 </button>
 </div>
@@ -268,35 +262,37 @@ Contactar Vendedor
 });
 });
 
-window.abrirModalContacto = function(producto,vendedor,ubicacion,telefono,email){
-document.getElementById("modal-producto").innerText = producto;
-document.getElementById("modal-vendedor").innerText = vendedor;
-document.getElementById("modal-ubicacion").innerText = ubicacion;
-document.getElementById("modal-telefono").innerText = telefono ? "+52 " + telefono : "No disponible";
-document.getElementById("modal-email").innerText = email;
-
-const mensaje = encodeURIComponent(`Hola ${vendedor}, me interesa tu producto "${producto}" que vi en Tradición Serrana.`);
-
-if(telefono){
-document.getElementById("btn-whatsapp").href = `https://wa.me/52${telefono}?text=${mensaje}`;
-document.getElementById("btn-whatsapp").style.display="block";
-}else{
-document.getElementById("btn-whatsapp").style.display="none";
-}
-
-document.getElementById("btn-correo").href = `mailto:${email}?subject=Interés en ${producto}`;
-
-new bootstrap.Modal(document.getElementById("modalContacto")).show();
-};
-
 buscador.addEventListener("input", () => {
 const texto = buscador.value.toLowerCase();
 const cards = document.querySelectorAll(".product-card");
 cards.forEach(card => {
 const nombre = card.querySelector("h5").innerText.toLowerCase();
-card.parentElement.style.display = nombre.includes(texto) ? "block" : "none";
+card.parentElement.style.display = nombre.includes(texto) ? "" : "none";
 });
 });
+
+window.abrirModalContacto = function(nombre, email, telefono) {
+document.getElementById("modalNombreProducto").innerText = nombre;
+document.getElementById("modalEmail").innerText = email;
+document.getElementById("modalTelefono").innerText = telefono || "No disponible";
+
+const container = document.getElementById("botonWhatsappContainer");
+container.innerHTML = "";
+
+const esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+if (telefono && esMovil) {
+container.innerHTML = `
+<a href="https://wa.me/${telefono.replace(/\D/g,'')}"
+target="_blank"
+class="btn btn-success rounded-pill px-4">
+Abrir WhatsApp
+</a>`;
+}
+
+const modal = new bootstrap.Modal(document.getElementById("modalContacto"));
+modal.show();
+};
 </script>
 
 </body>
